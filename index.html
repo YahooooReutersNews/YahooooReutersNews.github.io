@@ -1,152 +1,290 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>你的新闻标题 - 你的媒体名称</title>
+    <title>EXCLUSIVE: Mideast Truce Under Strain, Sources Point to July 31st Breakup - Reuters</title>
+    <link rel="icon" href="https://www.reuters.com/pf/resources/images/reuters/reuters-favicon-192x192.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        /* Base Styles */
         body {
-            font-family: 'Georgia', serif; /* 更经典的新闻字体 */
+            font-family: 'Georgia', serif; /* Classic serif for body text */
             margin: 0;
             padding: 0;
-            background-color: #f8f8f8; /* 柔和的背景色 */
-            color: #222;
-            line-height: 1.7; /* 增加行高，提升可读性 */
-            -webkit-font-smoothing: antialiased; /* 抗锯齿，使字体更平滑 */
+            background-color: #f5f5f5; /* Light grey background */
+            color: #1a1a1a;
+            line-height: 1.65; /* Optimal line height for readability */
+            -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
-        .container {
-            max-width: 760px; /* 经典文章内容宽度 */
-            margin: 40px auto; /* 增加上下边距 */
-            padding: 30px; /* 内部填充 */
-            background-color: #fff;
-            border-radius: 4px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* 更明显的阴影效果 */
+
+        /* Top Bar */
+        .top-bar {
+            background-color: #000;
+            color: #fff;
+            padding: 8px 0;
+            font-size: 0.85em;
+            text-align: center;
+            border-bottom: 1px solid #111;
         }
-        header {
-            text-align: center; /* 标题居中 */
+        .top-bar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 12px;
+            opacity: 0.9;
+            transition: opacity 0.2s;
+        }
+        .top-bar a:hover {
+            opacity: 1;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 760px; /* Standard article width */
+            margin: 30px auto;
+            padding: 35px 45px; /* Generous padding */
+            background-color: #fff;
+            border-radius: 3px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07); /* Subtle shadow */
+            border-top: 4px solid #FF8C00; /* Distinctive Reuters orange border */
+        }
+
+        /* Header & Logo */
+        .header {
+            text-align: center;
             margin-bottom: 30px;
         }
-        header h1 {
-            font-family: 'Playfair Display', serif; /* 更具报纸感的字体 */
-            font-size: 2.8em; /* 更大的标题 */
-            color: #1a1a1a;
-            margin-bottom: 10px;
-            line-height: 1.2;
+        .header .logo {
+            margin-bottom: 15px;
         }
-        .meta-info {
-            font-size: 0.95em;
+        .header .logo img {
+            width: 130px; /* Slightly larger logo */
+            height: auto;
+        }
+        .header .category {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.9em;
             color: #666;
-            margin-bottom: 25px; /* 增加与正文的间距 */
-            border-top: 1px solid #eee; /* 分隔线 */
-            padding-top: 15px;
-            text-align: center; /* 元信息居中 */
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 10px;
         }
-        .meta-info span {
-            margin: 0 10px;
-            white-space: nowrap; /* 防止日期和作者换行 */
-        }
-        .meta-info .source {
+
+        /* Article Title */
+        h1 {
+            font-family: 'Arial', sans-serif; /* Bold sans-serif for title */
+            font-size: 2.3em;
+            color: #111;
+            margin-top: 0;
+            margin-bottom: 20px;
+            line-height: 1.25;
             font-weight: bold;
-            color: #000; /* 媒体名称更突出 */
         }
-        .article-body p {
-            font-size: 1.1em; /* 正文稍大 */
-            margin-bottom: 1.2em; /* 段落间距 */
-            text-indent: 2em; /* 首行缩进 */
+
+        /* Byline and Share */
+        .byline-share-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+        .byline-info {
+            font-size: 0.88em;
+            color: #555;
+            line-height: 1.4;
+        }
+        .byline-info strong {
+            font-weight: 700;
+        }
+        .byline-info .location-date {
+            display: block; /* Ensures location/date is on its own line */
+            margin-bottom: 5px;
             color: #333;
         }
-        .article-body p:first-of-type {
-            font-size: 1.2em; /* 首段字体更大 */
-            font-weight: normal;
-            line-height: 1.5;
-            text-indent: 0; /* 首段不缩进 */
+        .share-buttons {
+            display: flex;
+            gap: 8px; /* Space between share icons */
+            font-size: 1.1em;
+        }
+        .share-buttons a {
+            color: #555;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .share-buttons a:hover {
+            color: #007bff; /* Hover color for share icons */
+        }
+
+        /* Lead Paragraph (Dateline & Intro) */
+        .lead-paragraph {
+            font-family: 'Georgia', serif;
+            font-size: 1.18em; /* Slightly larger and distinct */
+            font-weight: bold; /* Reuters often bold-starts its articles */
+            margin-bottom: 25px;
+            line-height: 1.6;
+            color: #222;
+        }
+        .lead-paragraph strong {
+            font-weight: bold;
+        }
+
+        /* Article Body */
+        .article-body p {
+            font-size: 1.05em;
+            margin-bottom: 1.3em; /* More space between paragraphs */
+            text-indent: 0; /* Reuters typically does not indent */
+            color: #333;
+        }
+        .article-body strong {
+            font-weight: bold;
         }
         .article-body img {
             max-width: 100%;
             height: auto;
-            display: block; /* 图像独占一行 */
-            margin: 20px auto; /* 居中显示 */
-            border-radius: 4px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: block;
+            margin: 30px auto; /* More vertical space around images */
+            border-radius: 3px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
         }
         .article-body figcaption {
-            font-size: 0.85em;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.8em;
             color: #777;
             text-align: center;
-            margin-top: 10px;
+            margin-top: -20px; /* Bring caption closer to image */
+            margin-bottom: 30px; /* Space below caption */
+            line-height: 1.4;
         }
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-            color: #888;
-            font-size: 0.85em;
+        .article-body blockquote {
+            margin: 20px 0;
+            padding: 15px 25px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #ddd;
+            font-style: italic;
+            color: #555;
+            font-size: 1em;
+        }
+
+        /* Footer */
+        .footer-links {
+            margin-top: 45px;
+            padding-top: 25px;
             border-top: 1px solid #eee;
+            text-align: center;
+            font-size: 0.85em;
+            color: #777;
+        }
+        .footer-links a {
+            color: #007bff;
+            text-decoration: none;
+            margin: 0 8px;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        .footer-links p {
+            margin: 8px 0;
         }
 
-        /* 导入 Google Fonts (可选，如果需要更专业的字体) */
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Georgia:ital,wght@0,400;0,700;1,400&display=swap');
-
-        /* 响应式调整 */
+        /* Responsive Adjustments */
         @media (max-width: 768px) {
             .container {
-                margin: 20px auto;
-                padding: 20px;
+                margin: 15px auto;
+                padding: 20px 25px;
+                border-top: 3px solid #FF8C00;
             }
-            header h1 {
-                font-size: 2em;
+            h1 {
+                font-size: 1.8em;
             }
-            .meta-info {
+            .byline-share-wrapper {
                 flex-direction: column;
-                align-items: center;
+                align-items: flex-start;
+                gap: 10px;
             }
-            .meta-info span {
-                margin: 5px 0;
+            .byline-info .location-date {
+                margin-bottom: 0;
+            }
+            .lead-paragraph {
+                font-size: 1.08em;
             }
             .article-body p {
-                font-size: 1em;
-                text-indent: 0; /* 移动端不缩进 */
+                font-size: 0.98em;
             }
-            .article-body p:first-of-type {
-                font-size: 1.1em;
+            .share-buttons {
+                margin-top: 10px; /* Add space if buttons stack */
             }
         }
     </style>
 </head>
 <body>
+    <div class="top-bar">
+        <a href="#">Latest</a>
+        <a href="#">Markets</a>
+        <a href="#">Business</a>
+        <a href="#">Technology</a>
+        <a href="#">World</a>
+    </div>
+
     <div class="container">
-        <header>
-            <p style="font-size: 1.2em; color: #555; margin-bottom: 5px;">【你的媒体名称】</p>
-            <h1>这里是你的新闻标题：吸引眼球的头条新闻</h1>
+        <header class="header">
+            <div class="logo">
+                <img src="https://www.reuters.com/pf/resources/images/reuters/reuters-logo.png?d=166" alt="Reuters">
+            </div>
+            <div class="category">WORLD NEWS</div>
         </header>
 
-        <div class="meta-info">
-            <span class="date">发布日期：2025年7月3日</span>
-            <span class="author">作者：张三</span>
-            <span class="source">来源：国际在线</span>
+        <h1>EXCLUSIVE: Mideast Truce Under Strain, Sources Point to July 31st Breakup</h1>
+
+        <div class="byline-share-wrapper">
+            <div class="byline-info">
+                <span class="location-date"><strong>JERUSALEM/TEHRAN</strong>, July 3 (Reuters)</span>
+                <span>By **Sarah Ahmed** and **Mohammed Ali**</span>
+            </div>
+            <div class="share-buttons">
+                <a href="#" title="Share on Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" title="Share via Email"><i class="fas fa-envelope"></i></a>
+            </div>
         </div>
+
+        <p class="lead-paragraph"><strong>A fragile ceasefire between Israel and Iran is under severe strain, with multiple anonymous senior diplomatic sources indicating a high probability of renewed conflict by <span style="color: #c00;">July 31st</span>, as proxy activities in the region intensify.</strong></p>
 
         <div class="article-body">
-            <p><strong>（导语）</strong> 这通常是新闻报道的第一段，用来概括最重要、最核心的信息，吸引读者继续阅读。它应该包含新闻的“5W1H”元素：何人、何时、何地、何事、为何以及如何。这段话的字体通常会比正文略大或加粗，以突出其重要性。</p>
+            <p>The truce, brokered by international mediators just weeks ago, was intended to de-escalate simmering tensions in the volatile Middle East. However, recent intelligence reports suggest both nations are covertly bolstering military postures and accusing each other of violating key terms of the agreement.</p>
 
-            <p>这里是新闻的正文内容。请在这里详细描述事件的经过、背景、相关人物的言论和影响。每一段都应该围绕一个中心思想展开，确保逻辑清晰、条理分明。你可以分多段来叙述。</p>
-
-            <p>例如，你可以加入一些具体的细节，引用专家观点，或者描述事件的最新进展。保持语言的客观性和严谨性，符合新闻报道的风格。</p>
+            <blockquote>
+                "The reports we are receiving are deeply concerning. The patterns of action by both sides bear an uncanny resemblance to previous escalations," a Western diplomat, speaking on condition of anonymity, told Reuters. "We are particularly alarmed by the period around the <strong>end of July</strong>, coinciding with several critical deadlines and military exercises."
+            </blockquote>
 
             <figure>
-                <img src="https://via.placeholder.com/700x400?text=新闻配图" alt="新闻相关图片">
-                <figcaption>图片说明：这是新闻配图的说明文字，可以描述图片内容或来源。</figcaption>
+                <img src="https://via.placeholder.com/700x400?text=Illustrative+image+of+tensions" alt="Illustrative image of tensions between Israel and Iran.">
+                <figcaption>FILE PHOTO: An illustrative image depicting the flags of Israel and Iran, symbolizing the geopolitical tensions between the two nations.</figcaption>
             </figure>
 
-            <p>继续正文内容。如果事件有多个方面，可以分段落进行阐述。例如，你可以讨论事件对社会、经济或政治的影响，或者展望未来的发展。</p>
+            <p>Iran has vehemently denied any breaches of the ceasefire, instead accusing Israel of provocative military actions in the region that threaten stability. "Our military actions are purely defensive, aimed at protecting our national sovereignty from external aggression," a spokesperson for Iran's Foreign Ministry stated.</p>
 
-            <p>最后一段可以总结全文，或者提供一些结论性的信息。有时候，新闻报道的结尾会展望未来，或者提供事件的后续发展信息。</p>
+            <p>Meanwhile, Israel's Defense Ministry did not immediately respond to a Reuters request for comment. However, an Israeli security official, who also spoke anonymously, hinted that Israel is prepared for any contingency and is closely monitoring the movements of Iran and its regional allies. "We have reason to believe certain elements are looking to exploit the current delicate balance and spark fresh incidents <strong>by the end of the month</strong>," the official suggested.</p>
+
+            <p>Analysts warn that a breakdown of the ceasefire could lead to a rapid escalation, with profound implications for global energy markets and the geopolitical landscape. The United Nations has urged both parties to exercise maximum restraint and resolve their differences through diplomatic channels.</p>
+
+            <p>Reporting by Sarah Ahmed in Jerusalem and Mohammed Ali in Tehran; Editing by David Clark</p>
         </div>
 
-        <footer>
-            <p>&copy; 2025 你的媒体名称. 版权所有.</p>
-        </footer>
+        <div class="footer-links">
+            <p>More from Reuters:</p>
+            <p>
+                <a href="#">Middle East Conflict</a> |
+                <a href="#">International Politics</a> |
+                <a href="#">Energy Markets</a> |
+                <a href="#">Iran Sanctions</a>
+            </p>
+            <p>&copy; 2025 Reuters. All Rights Reserved. Republication or redistribution of Reuters content, including by framing or similar means, is expressly prohibited without the prior written consent of Reuters. Reuters and the Reuters sphere logo are registered trademarks and trademarks of the Reuters group of companies around the world.</p>
+        </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 </body>
 </html>
