@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>你的新闻标题 - 你的媒体名称</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif; /* 更经典的新闻字体 */
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8; /* 柔和的背景色 */
+            color: #222;
+            line-height: 1.7; /* 增加行高，提升可读性 */
+            -webkit-font-smoothing: antialiased; /* 抗锯齿，使字体更平滑 */
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .container {
+            max-width: 760px; /* 经典文章内容宽度 */
+            margin: 40px auto; /* 增加上下边距 */
+            padding: 30px; /* 内部填充 */
+            background-color: #fff;
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* 更明显的阴影效果 */
+        }
+        header {
+            text-align: center; /* 标题居中 */
+            margin-bottom: 30px;
+        }
+        header h1 {
+            font-family: 'Playfair Display', serif; /* 更具报纸感的字体 */
+            font-size: 2.8em; /* 更大的标题 */
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+        .meta-info {
+            font-size: 0.95em;
+            color: #666;
+            margin-bottom: 25px; /* 增加与正文的间距 */
+            border-top: 1px solid #eee; /* 分隔线 */
+            padding-top: 15px;
+            text-align: center; /* 元信息居中 */
+        }
+        .meta-info span {
+            margin: 0 10px;
+            white-space: nowrap; /* 防止日期和作者换行 */
+        }
+        .meta-info .source {
+            font-weight: bold;
+            color: #000; /* 媒体名称更突出 */
+        }
+        .article-body p {
+            font-size: 1.1em; /* 正文稍大 */
+            margin-bottom: 1.2em; /* 段落间距 */
+            text-indent: 2em; /* 首行缩进 */
+            color: #333;
+        }
+        .article-body p:first-of-type {
+            font-size: 1.2em; /* 首段字体更大 */
+            font-weight: normal;
+            line-height: 1.5;
+            text-indent: 0; /* 首段不缩进 */
+        }
+        .article-body img {
+            max-width: 100%;
+            height: auto;
+            display: block; /* 图像独占一行 */
+            margin: 20px auto; /* 居中显示 */
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .article-body figcaption {
+            font-size: 0.85em;
+            color: #777;
+            text-align: center;
+            margin-top: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            color: #888;
+            font-size: 0.85em;
+            border-top: 1px solid #eee;
+        }
+
+        /* 导入 Google Fonts (可选，如果需要更专业的字体) */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Georgia:ital,wght@0,400;0,700;1,400&display=swap');
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px auto;
+                padding: 20px;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            .meta-info {
+                flex-direction: column;
+                align-items: center;
+            }
+            .meta-info span {
+                margin: 5px 0;
+            }
+            .article-body p {
+                font-size: 1em;
+                text-indent: 0; /* 移动端不缩进 */
+            }
+            .article-body p:first-of-type {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <p style="font-size: 1.2em; color: #555; margin-bottom: 5px;">【你的媒体名称】</p>
+            <h1>这里是你的新闻标题：吸引眼球的头条新闻</h1>
+        </header>
+
+        <div class="meta-info">
+            <span class="date">发布日期：2025年7月3日</span>
+            <span class="author">作者：张三</span>
+            <span class="source">来源：国际在线</span>
+        </div>
+
+        <div class="article-body">
+            <p><strong>（导语）</strong> 这通常是新闻报道的第一段，用来概括最重要、最核心的信息，吸引读者继续阅读。它应该包含新闻的“5W1H”元素：何人、何时、何地、何事、为何以及如何。这段话的字体通常会比正文略大或加粗，以突出其重要性。</p>
+
+            <p>这里是新闻的正文内容。请在这里详细描述事件的经过、背景、相关人物的言论和影响。每一段都应该围绕一个中心思想展开，确保逻辑清晰、条理分明。你可以分多段来叙述。</p>
+
+            <p>例如，你可以加入一些具体的细节，引用专家观点，或者描述事件的最新进展。保持语言的客观性和严谨性，符合新闻报道的风格。</p>
+
+            <figure>
+                <img src="https://via.placeholder.com/700x400?text=新闻配图" alt="新闻相关图片">
+                <figcaption>图片说明：这是新闻配图的说明文字，可以描述图片内容或来源。</figcaption>
+            </figure>
+
+            <p>继续正文内容。如果事件有多个方面，可以分段落进行阐述。例如，你可以讨论事件对社会、经济或政治的影响，或者展望未来的发展。</p>
+
+            <p>最后一段可以总结全文，或者提供一些结论性的信息。有时候，新闻报道的结尾会展望未来，或者提供事件的后续发展信息。</p>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 你的媒体名称. 版权所有.</p>
+        </footer>
+    </div>
+</body>
+</html>
